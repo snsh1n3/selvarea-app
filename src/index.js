@@ -8,7 +8,7 @@ import { CartProvider } from './context/CartContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/selvarea-app">
+    <BrowserRouter>
       <CartProvider>
         <App />
       </CartProvider>
