@@ -12,10 +12,11 @@ function Carousel() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      showSlide(currentSlide + 1);
-    }, 5000); 
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
     return () => clearInterval(interval);
-  }, [currentSlide, slides.length])
+  }, [slides.length]);
 
   return (
     <section id="carousel" className="carousel">
@@ -29,8 +30,8 @@ function Carousel() {
           />
         ))}
         <div className="controls">
-          <span className="prev" onClick={() => showSlide(currentSlide - 1)}>❮</span>
-          <span className="next" onClick={() => showSlide(currentSlide + 1)}>❯</span>
+          <span className="prev" onClick={() => showSlide(currentSlide - 1)}>&lt;</span>
+          <span className="next" onClick={() => showSlide(currentSlide + 1)}>&gt;</span>
         </div>
       </div>
       <div className="features">
