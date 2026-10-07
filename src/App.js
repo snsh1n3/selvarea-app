@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from './assets/chusquisimas-logo.webp';
+import logo from './assets/chusquisimas-logo.svg';
 
 const instagramUrl = 'https://www.instagram.com/chusquisimas.co/';
 
