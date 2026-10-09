@@ -33,6 +33,8 @@ jobs:
         run: python3 tests/integration/check_sqlite_schema.py
       - name: Check audited admin transactions
         run: python3 tests/integration/check_admin_transactions.py
+      - name: Check safe archived product deletion
+        run: python3 tests/integration/check_safe_delete.py
       - name: Check deployment isolation
         run: python3 tests/integration/check_deployment_gate.py
       - name: Build
