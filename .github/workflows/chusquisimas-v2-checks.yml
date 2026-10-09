@@ -29,5 +29,7 @@ jobs:
         run: npm run typecheck
       - name: Tests
         run: npm test
+      - name: Validate local SQLite schema and initial catalog
+        run: python3 tests/integration/check_sqlite_schema.py
       - name: Build
         run: npm run build
