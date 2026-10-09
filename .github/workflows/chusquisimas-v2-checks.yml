@@ -31,5 +31,7 @@ jobs:
         run: npm test
       - name: Validate local SQLite schema and initial catalog
         run: python3 tests/integration/check_sqlite_schema.py
+      - name: Check deployment isolation
+        run: python3 tests/integration/check_deployment_gate.py
       - name: Build
         run: npm run build
